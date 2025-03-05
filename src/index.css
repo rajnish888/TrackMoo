@@ -1,0 +1,308 @@
+/* ========================================= */
+/* ============== GLOBAL STYLES ============ */
+/* ========================================= */
+
+
+:root {
+  --green-50: #f5fbf2;
+  --green-100: #e7f7e1;
+  --green-200: #d1edc5;
+  --green-300: #acdd98;
+  --green-400: #7ec563;
+  --green-500: #66bc45;
+  --green-600: #488b2e;
+  --green-700: #3a6e27;
+  --green-800: #315823;
+  --green-900: #29481f;
+  --green-950: #12270c;
+  --black-50: #F6F6F6;
+  --black-100: #E7E7E7;
+  --black-200: #D1D1D1;
+  --black-300: #B0B0B0;
+  --black-400: #888888;
+  --black-500: #6D6D6D;
+  --black-600: #5D5D5D;
+  --black-700: #4F4F4F;
+  --black-800: #454545;
+  --black-900: #3D3D3D;
+  --black-950: #1D1D1D;
+  --white: #ffffff;
+  --black: #000000;
+  --wave-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background-color: var(--green-100);
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--black-950);
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-bottom: 0;
+}
+
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.input-field::placeholder {
+  color: var(--black);
+}
+
+a {
+  color: var(--green-600);
+  transition: all 0.5s;
+}
+
+.dark-btn {
+  position: relative;
+  display: inline-flex;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: var(--green-500);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: normal;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-btn::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: var(--wave-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: 0;
+}
+
+.dark-btn:hover {
+  background-color: var(--green-400);
+  color: var(--white);
+}
+
+.dark-btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.dark-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.light-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  color: var(--green-500);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+}
+
+.light-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: var(--green-500);
+  z-index: 0;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.light-btn:hover {
+  color: var(--white);
+  border-color: var(--green-500);
+}
+
+.light-btn:hover::before {
+  width: 120%;
+}
+
+.light-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============== INPUT STYLES ============ */
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.input-field,.selectFieldClass {
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 12px 10px 42px;
+  background-color: var(--green-100);
+  color: var(--black-950);
+  min-height: 48px;
+}
+
+.ps-12  {
+  padding-left: 12px;
+}
+
+
+.pt-12  {
+  padding-top: 12px;
+}
+.input-field:focus-visible {
+outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.right-icon {
+  left: auto;
+  cursor: pointer;
+  right: 12px;
+}
+
+
+.font-18 {
+  font-size: 18px;
+}
+
+/* ============== INPUT STYLES ============ */
+
+/* ============== CHECKBOX STYLES ============ */
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.hidden-checkbox {
+  display: none; 
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--green-600); 
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hidden-checkbox:checked + .custom-checkbox {
+  background-color: white;
+  border-color: var(--green-600); 
+}
+
+.hidden-checkbox:checked + .custom-checkbox .checkmark {
+  color: var(--green-600); 
+}
+
+.checkmark {
+  font-size: 10px;
+  font-weight: bold;
+  color: transparent;
+  line-height: 1;
+}
+
+.hidden-checkbox:checked + .custom-checkbox .checkmark {
+  color: var(--green-600); 
+}
+
+.checkbox-label {
+  font-size: 16px;
+  color: var(--black-950);
+  font-weight: 500;
+}
+
+/* ============== CHECKBOX STYLES ============ */
+
+
+
+
+/* ========================================= */
+/* ============== GLOBAL STYLES ============ */
+/* ========================================= */
+
+
+
+
+
+.header {
+  background-color: var(--white);
+  padding: 16px 0;
+}
+a.navbar-brand img {
+  max-width: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

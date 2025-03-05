@@ -1,0 +1,59 @@
+.loginPage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.loginImgSec {
+    max-width: 42%;
+    width: 100%;
+}
+
+.loginImgSec img {
+    height: 100svh;
+    width: 100%;
+}
+
+.loginFormSec {
+    max-width: 58%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formWrapper {
+    max-width: 520px;
+    width: 100%;
+    background-color: var(--white);
+    padding:  40px 24px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formLogoTxt p {
+    margin: 32px auto;
+    max-width: 300px;
+}
+
+.forgotPswd a {
+    font-weight: 500;
+    color: var(--green-600);
+}
+
+.loginBtn {
+    margin: 20px 0;
+}
+
+
+.storeList {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--green-500);
+    width: 100%;
+    justify-content: center;
+}
