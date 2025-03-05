@@ -35,6 +35,7 @@ const Login = () => {
             <img className='img-fluid' src={Logo} alt="Login Background" />
             <p>Enter your email or phone
               and password to sign in your account</p>
+              
           </div>
           <div className='formInputField w-100'>
 
